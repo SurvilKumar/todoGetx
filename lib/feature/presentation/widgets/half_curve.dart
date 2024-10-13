@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo/core/utils/colors_const.dart';
 
 class CircularAvatarWithArc extends StatelessWidget {
   @override
@@ -7,19 +8,19 @@ class CircularAvatarWithArc extends StatelessWidget {
       alignment: Alignment.center,
       children: [
         // Custom painted arc
-        CustomPaint(
-          size: Size(120, 120), // Size of the area for the arc
-          painter: ArcPainter(),
-        ),
+        // CustomPaint(
+        //   size: Size(50, 50), // Size of the area for the arc
+        //   painter: ArcPainter(),
+        // ),
         // Padding around CircleAvatar
         Container(
           padding: EdgeInsets.all(5), // Padding around the avatar
           decoration: BoxDecoration(
             shape: BoxShape.circle,
-            color: Colors.white, // Background color for the padding
+            color: ColorConstant.whiteColor.withOpacity(0.1), // Background color for the padding
           ),
           child: CircleAvatar(
-            radius: 50,
+            radius: 25,
             backgroundImage: NetworkImage('https://via.placeholder.com/150'), // Replace with your image
           ),
         ),
